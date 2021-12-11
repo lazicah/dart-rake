@@ -5,7 +5,7 @@ bool _isOtherNum(s) => _numAltRegex.hasMatch(s);
 bool isNum(String s) =>
     num.tryParse(s) != null || _isStandardNum(s) || _isOtherNum(s);
 
-num tryParseNum(String s) {
+num? tryParseNum(String s) {
   try {
     return num.parse(s);
   } catch (FormatException) {

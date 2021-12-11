@@ -16,4 +16,10 @@ main() {
   // only keywords with length >= 5
   // and at least two occurrences
   print(rake.rank(exampleText, minChars: 5, minFrequency: 2));
+
+  final sentences = splitSentences(exampleText);
+
+  final stopWords = buildStopWordRegExp(['types']);
+
+  print(splitPhrases(sentences, stopWords));
 }
